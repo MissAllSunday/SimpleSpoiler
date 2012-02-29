@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE package-info SYSTEM "http://www.simplemachines.org/xml/package-info">
+<package-info xmlns="http://www.simplemachines.org/xml/package-info" xmlns:smf="http://www.simplemachines.org/">
+	<id>Suki:SimpleSpoiler</id>
+	<name>Simple Spoiler</name>
+	<version>1.0.3</version>
+	<type>modification</type>
+	<install for="2.0 - 2.0.99">
+	    <readme parsebbc="true">readme.txt</readme>
+		<require-file name="Subs-SimpleSpoiler.php" destination="$sourcedir" />
+		<require-dir name="languages" destination="$themedir" />
+		<require-file name="spoiler.gif" destination="$imagesdir/bbc" />
+		<code>install.php</code>
+	</install>
+	<uninstall for="2.0 - 2.0.99">
+		<remove-file name="$sourcedir/Subs-SimpleSpoiler.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.english.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.spanish_latin.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.spanish_latin-utf8.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.spanish_es.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.spanish_es-utf8.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.russian.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.russian-utf8.php" />
+		<remove-file name="$languagedir/SimpleSpoiler.german.php" />
+		<remove-file name="$imagesdir/bbc/spoiler.gif" />
+		<code>remove.php</code>
+	</uninstall>
+</package-info>
