@@ -35,7 +35,7 @@
 if (!defined('SMF'))
 	die('Hacking attempt...');
 
-function spoiler_bbc_add_code($codes)
+function spoiler_bbc_add_code(&$codes)
 {
 	global $txt;
 
@@ -51,7 +51,7 @@ function spoiler_bbc_add_code($codes)
 	spoiler_header();
 }
 
-function spoiler_bbc_add_button($buttons)
+function spoiler_bbc_add_button(&$buttons)
 {
 	global $txt;
 
@@ -74,7 +74,7 @@ function spoiler_header()
 	if ($header_done)
 		return;
 
-	echo = '
+	echo '
 <script type="text/javascript">!window.jQuery && document.write(unescape(\'%3Cscript src="http://code.jquery.com/jquery.min.js"%3E%3C/script%3E\'))</script>
 
 	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
