@@ -40,32 +40,32 @@ function spoiler_bbc_add_button(&$buttons)
 
 function spoiler_header()
 {
-	global $txt, $context;
+	global $txt;
 	static $header_done = false;
 
 	if ($header_done)
 		return;
 
 	echo '
-<script type="text/javascript">!window.jQuery && document.write(unescape(\'%3Cscript src="//code.jquery.com/jquery.min.js"%3E%3C/script%3E\'))</script>
+<script type="text/javascript">!window.$ && document.write(unescape(\'%3Cscript src="https://code.jquery.com/jquery-3.5.1.min.js"%3E%3C/script%3E\'))</script>
 
-	<script language="JavaScript" type="text/javascript"><!-- // --><![CDATA[
-		jQuery(document).ready(function() {
+	<script language="JavaScript" type="text/javascript">
+		$(document).ready(function() {
 			var is_visible = false;
 
-			jQuery(\'.spoiler_toggle\').prev().append(\' [<a href="#" class="spoiler_toggle_link">\' + ' . JavaScriptEscape($txt['spoiler_show']) . ' + \'</a>]\');
-			jQuery(\'.spoiler_toggle\').hide();
+			$(\'.spoiler_toggle\').prev().append(\' [<a href="#" class="spoiler_toggle_link">\' + ' . JavaScriptEscape($txt['spoiler_show']) . ' + \'</a>]\');
+			$(\'.spoiler_toggle\').hide();
 
-			jQuery(\'a.spoiler_toggle_link\').click(function() {
+			$(\'a.spoiler_toggle_link\').click(function() {
 				is_visible = !is_visible;
 
-				jQuery(this).html((!is_visible) ? ' . JavaScriptEscape($txt['spoiler_show']) . ' : ' . JavaScriptEscape($txt['spoiler_hide']) . ');
-				jQuery(this).parent().next(\'.spoiler_toggle\').toggle(\'slow\');
+				$(this).html((!is_visible) ? ' . JavaScriptEscape($txt['spoiler_show']) . ' : ' . JavaScriptEscape($txt['spoiler_hide']) . ');
+				$(this).parent().next(\'.spoiler_toggle\').toggle(\'slow\');
 
 				return false;
 			});
 		});
-	// ]]></script>';
+	</script>';
 
 	$header_done = true;
 }
