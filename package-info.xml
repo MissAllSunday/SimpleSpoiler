@@ -8,7 +8,7 @@
 	<install for="2.0 - 2.0.99">
 	    <readme parsebbc="true">readme.txt</readme>
 		<require-file name="Subs-SimpleSpoiler.php" destination="$sourcedir" />
-		<require-dir name="languages" destination="$themedir" />
+        <require-dir name="Themes" destination="$boarddir">Theme files</require-dir>
 		<require-file name="spoiler.gif" destination="$imagesdir/bbc" />
 		<code>install.php</code>
 	</install>
@@ -23,6 +23,7 @@
 		<remove-file name="$languagedir/SimpleSpoiler.russian-utf8.php" />
 		<remove-file name="$languagedir/SimpleSpoiler.german.php" />
 		<remove-file name="$imagesdir/bbc/spoiler.gif" />
+        <remove-file name="$themedir/scripts/simpleSpoiler.js" />
 		<code>remove.php</code>
 	</uninstall>
 </package-info>
