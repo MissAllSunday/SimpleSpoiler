@@ -1,6 +1,6 @@
 
 (function(currentWindow, currentDocument, simpleSpoilerShow, simpleSpoilerHide) {
-    let spoilerToggleClass = 'spoiler_toggle';
+    let spoilerToggleClass = 'spoiler_toggle',
         spoilerBlock = currentDocument.getElementsByClassName(spoilerToggleClass),
         innerBlock = currentDocument.getElementsByClassName('inner'),
         textShow = '[' + (simpleSpoilerShow || 'Show') + ']',
@@ -30,6 +30,7 @@
     }
 
     for (let index = 0, len = spoilerBlock.length; index < len; ++index) {
+        spoilerBlock[index].id = 'simple_spoiler_' + index;
         toggleSpoiler(spoilerBlock[index]);
     }
 
