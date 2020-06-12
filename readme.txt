@@ -11,13 +11,10 @@ SimpleSpoiler is a simple modification that allow you to use the [nobbc] [spoile
 
 [color=purple][b][size=12pt]License[/size][/b][/color]
 
- * This SMF modification is subject to the Mozilla Public License Version
- * 1.1 (the "License"); you may not use this SMF modification except in compliance with
- * the License. You may obtain a copy of the License at
- * http://www.mozilla.org/MPL/
+* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/.
 
-
--Uses jquery to add a nice effect on the spoiler
 
 [color=green][size=12pt]Languages[/size][/color]
 
@@ -31,16 +28,17 @@ SimpleSpoiler is a simple modification that allow you to use the [nobbc] [spoile
 -russian-utf8
 -german
 
-[color=green][size=12pt]Demo[/size][/color]
-
--A working demo can be found here: [url=http://missallsunday.com/demos/simplespoiler_demo_5.0.html] Simple Spoiler demo [/url]
-
 [color=green][size=12pt]Support[/size][/color]
 
 -Please use the support topic for questions.
 
 
 [color=green][size=12pt]Change log[/size][/color]
+
+[b]2.0[/b]
+- Remove jQuery, uses pure JavaScript now.
+- Add support for DOM changes made by onQuickEdit
+- Move JavaScript code to its own file.
 
 [b]-1.0.3[/b]
 -Compatible with SMF 2.0.x
