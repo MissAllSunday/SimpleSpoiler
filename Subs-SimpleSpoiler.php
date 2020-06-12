@@ -15,7 +15,7 @@ function spoiler_bbc_add_code(&$codes)
 
 	$codes[] = array(
 		'tag' => 'spoiler',
-		'before' => '<span>' . $txt['spoiler_desc'] . '</span><div class="spoiler_toggle">',
+		'before' => '<span>' . $txt['spoiler_desc'] . '</span> <div class="spoiler_toggle">',
 		'after' => '</div>',
 		'block_level' => true,
 	);
@@ -40,32 +40,19 @@ function spoiler_bbc_add_button(&$buttons)
 
 function spoiler_header()
 {
-	global $txt;
+	global $txt, $settings, $context;
 	static $header_done = false;
 
 	if ($header_done)
 		return;
 
-	echo '
-<script type="text/javascript">!window.$ && document.write(unescape(\'%3Cscript src="https://code.jquery.com/jquery-3.5.1.min.js"%3E%3C/script%3E\'))</script>
-
+	$context['insert_after_template'] .= '
 	<script language="JavaScript" type="text/javascript">
-		$(document).ready(function() {
-			var is_visible = false;
-
-			$(\'.spoiler_toggle\').prev().append(\' [<a href="#" class="spoiler_toggle_link">\' + ' . JavaScriptEscape($txt['spoiler_show']) . ' + \'</a>]\');
-			$(\'.spoiler_toggle\').hide();
-
-			$(\'a.spoiler_toggle_link\').click(function() {
-				is_visible = !is_visible;
-
-				$(this).html((!is_visible) ? ' . JavaScriptEscape($txt['spoiler_show']) . ' : ' . JavaScriptEscape($txt['spoiler_hide']) . ');
-				$(this).parent().next(\'.spoiler_toggle\').toggle(\'slow\');
-
-				return false;
-			});
-		});
-	</script>';
+		let simpleSpoilerShow = '. JavaScriptEscape($txt["spoiler_show"]) .';
+		let simpleSpoilerHide = '. JavaScriptEscape($txt["spoiler_hide"]) .';
+		let simpleSpoilerDesc = '. JavaScriptEscape($txt["spoiler_desc"]) .';
+	</script>
+	<script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/simpleSpoiler.js"></script>';
 
 	$header_done = true;
 }
