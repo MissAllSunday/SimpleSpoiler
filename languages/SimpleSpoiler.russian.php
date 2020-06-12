@@ -1,7 +1,11 @@
 <?php
 
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at https://mozilla.org/MPL/2.0/. */
+
 global $txt;
 
-$txt['spoiler_show'] = 'Показать';
-$txt['spoiler_hide'] = 'Скрыть';
-$txt['spoiler_desc'] = 'Спойлер';
+$txt['spoiler_show'] = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
+$txt['spoiler_hide'] = 'пїЅпїЅпїЅпїЅпїЅпїЅ';
+$txt['spoiler_desc'] = 'пїЅпїЅпїЅпїЅпїЅпїЅпїЅ';
