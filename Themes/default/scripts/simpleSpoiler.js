@@ -23,6 +23,13 @@
             let isCollapsed = currentSpoilerElement.style.display === "none";
 
             currentSpoilerElement.style.display = isCollapsed ? "block" : "none";
+
+            if (isCollapsed)
+                currentSpoilerElement.classList.add('simpleSpoilerFadeIn');
+
+            else
+                currentSpoilerElement.classList.remove('simpleSpoilerFadeIn');
+
             this.innerHTML = isCollapsed ? textHide : textShow;
         };
 
@@ -39,8 +46,10 @@
             for (let index = 0, len = mutation.addedNodes.length; index < len; ++index) {
                 let currentNode = mutation.addedNodes[index];
 
-                if (currentNode.className === spoilerToggleClass)
+                if (currentNode.className === spoilerToggleClass) {
+                    currentNode.id = 'd_simple_spoiler_' + index;
                     toggleSpoiler(currentNode);
+                }
             }
         });
     });

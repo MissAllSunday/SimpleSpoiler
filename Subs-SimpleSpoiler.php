@@ -46,13 +46,14 @@ function spoiler_header()
 	if ($header_done)
 		return;
 
-	$context['insert_after_template'] .= '
+	$context['html_headers'] .= '
 	<script language="JavaScript" type="text/javascript">
 		let simpleSpoilerShow = '. JavaScriptEscape($txt["spoiler_show"]) .';
 		let simpleSpoilerHide = '. JavaScriptEscape($txt["spoiler_hide"]) .';
 		let simpleSpoilerDesc = '. JavaScriptEscape($txt["spoiler_desc"]) .';
 	</script>
-	<script type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/simpleSpoiler.js"></script>';
+	<script defer type="text/javascript" src="' . $settings['default_theme_url'] . '/scripts/simpleSpoiler.js"></script>
+	<link rel="stylesheet" href="' . $settings['default_theme_url'] . '/css/simpleSpoiler.css">';
 
 	$header_done = true;
 }

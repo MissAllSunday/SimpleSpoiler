@@ -24,6 +24,7 @@
 		<remove-file name="$languagedir/SimpleSpoiler.german.php" />
 		<remove-file name="$imagesdir/bbc/spoiler.gif" />
         <remove-file name="$themedir/scripts/simpleSpoiler.js" />
+        <remove-file name="$themedir/css/simpleSpoiler.css" />
 		<code>remove.php</code>
 	</uninstall>
 </package-info>

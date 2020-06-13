@@ -1,0 +1,12 @@
+.simpleSpoilerFadeIn {
+    animation: simpleSpoilerFadeInFunc 500ms;
+}
+@keyframes simpleSpoilerFadeInFunc {
+    0% {
+        display: block;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1.0;
+    }
+}
